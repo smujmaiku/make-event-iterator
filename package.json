@@ -1,6 +1,6 @@
 {
   "name": "make-event-iterator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create an iterator from an event emitter",
   "main": "index.js",
   "directories": {
@@ -32,5 +32,8 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "jest": "^24.0.0"
+  },
+  "dependencies": {
+    "just-defer": "^0.1.0"
   }
 }

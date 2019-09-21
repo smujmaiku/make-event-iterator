@@ -4,6 +4,8 @@
  * MIT Licensed
  */
 
+const justDefer = require('just-defer');
+
 /**
  * Create an iterator from an event emitter
  * @param {*} emitter Emitter to interate over
@@ -28,12 +30,12 @@ function makeEventIterator(emitter, opts = {}) {
 	const buffer = [];
 
 	const setupNext = () => {
-		const promise = new Promise((resolve, reject) => (defer = { resolve, reject }));
-		buffer.push(promise);
+		defer = justDefer();
+		buffer.push(defer.promise);
 	};
 	setupNext();
 
-	emitter.on(dataName, chunk => {
+	emitter.on(dataName, (chunk) => {
 		const { resolve } = defer;
 		setupNext();
 		resolve(chunk);
