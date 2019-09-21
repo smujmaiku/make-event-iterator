@@ -11,7 +11,7 @@ Create an iterator from an event emitter!
 
 ## Installation
 
-`npm i smujmaiku/make-event-iterator`
+`npm i make-event-iterator`
 
 ## Usage
 
@@ -32,7 +32,7 @@ const makeEventIterator = require('make-event-iterator');
 
 async function handleHttp(req, res) {
     for await(const chunk of makeEventIterator(req)) {
-        console.log('chunk', chunk.length);
+        console.log('chunk:', chunk.length);
     }
     res.end();
 }

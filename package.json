@@ -1,6 +1,6 @@
 {
   "name": "make-event-iterator",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Create an iterator from an event emitter",
   "main": "index.js",
   "directories": {
