@@ -1,4 +1,4 @@
-const makeEventIterator = require('./make-event-iterator');
+import makeEventIterator from './event-iterator';
 
 const mockEmitter = () => {
 	const list = [];

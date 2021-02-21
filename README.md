@@ -1,8 +1,5 @@
 # Make Event Iterator
 
-[![build status][travis-image]][travis-url]
-[![coverage status][codecov-image]][codecov-url]
-
 Do you have event emitters you are wrapping in a single promise?
 Is the return from that process massive and causing memory issues?
 Do you want an excuse to use [for await...of][for-await-of]?
@@ -60,10 +57,6 @@ for await (const line of makeEventIterator(rl, makeEventIterator.READLINE)) {
 
 ## License
 
-Copyright (c) 2019, Michael Szmadzinski. (MIT License)
+Copyright (c) 2021, Michael Szmadzinski. (MIT License)
 
-[travis-image]: https://travis-ci.org/smujmaiku/make-event-iterator.svg?branch=master
-[travis-url]: https://travis-ci.org/smujmaiku/make-event-iterator
-[codecov-image]: https://coveralls.io/repos/github/smujmaiku/make-event-iterator/badge.svg
-[codecov-url]: https://coveralls.io/github/smujmaiku/make-event-iterator
 [for-await-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of
